@@ -38,6 +38,20 @@ namespace CodingEventsDemo.Migrations
 
                     b.ToTable("Events");
                 });
+
+            modelBuilder.Entity("CodingEventsDemo.Models.EventCategory", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Category");
+                });
 #pragma warning restore 612, 618
         }
     }
